@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentConnexion">
+
+    <TextView
+        android:id="@+id/titres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/connexion"
+        android:textSize="50sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_above="@id/mail" />
+
+    <EditText
+        android:id="@+id/mail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/mail"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="15dp"
+        android:inputType="textEmailAddress"
+        android:layout_above="@id/mot_de_passe"
+        android:textSize="15sp"
+        android:autofillHints="@string/mail" />
+
+    <EditText
+        android:id="@+id/mot_de_passe"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/mot_de_passe"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:inputType="textPassword"
+        android:layout_centerInParent="true"
+        android:textSize="15sp"
+        android:autofillHints="@string/mot_de_passe" />
+
+    <Button
+        android:id="@+id/bouton_connexion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mot_de_passe"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/white"
+        android:text="@string/connexion"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_above="@id/swipe_right_enregistrer"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/fleche" />
+
+    <TextView
+        android:id="@+id/swipe_right_enregistrer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/swipe_right_enregistrer"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>

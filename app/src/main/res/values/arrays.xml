@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listes_des_patients" />
+    <string-array name="listes_des_profils" />
+</resources>

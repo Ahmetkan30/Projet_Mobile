@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/activites_objet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activites_objet"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="280dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="280dp" />
+        <ImageView
+            android:id="@+id/image_remove"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_toEndOf="@+id/textView"
+            android:src="@drawable/fermer"
+            android:contentDescription="@string/fermer"
+            tools:ignore="UnknownId" />
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/activites_titres"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/titres"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:padding="15dp"
+        android:inputType="text"
+        android:textSize="15sp"
+        android:autofillHints="@string/titres" />
+
+    <EditText
+        android:id="@+id/activites_descriptions"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/descriptions"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:padding="15dp"
+        android:inputType="text"
+        android:textSize="15sp"
+        android:autofillHints="@string/descriptions" />
+
+    <EditText
+        android:id="@+id/durees"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/durees"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:padding="15dp"
+        android:inputType="text"
+        android:textSize="15sp"
+        android:autofillHints="@string/durees" />
+
+</LinearLayout>

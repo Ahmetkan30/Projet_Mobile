@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Projet_Mobile</string>
+    <string name="creation_de_parcours">Créations de parcours APA</string>
+    <string name="parcs">Parcours de APA</string>
+    <string name="descriptions">Description</string>
+    <string name="categories">Categorie</string>
+    <string name="patients">Patient</string>
+    <string name="activites">Activites</string>
+    <string name="durees">Duree</string>
+    <string name="activites_ajouter">Ajouter une activité</string>
+    <string name="valide">Valider</string>
+    <string name="annule">Annuler</string>
+    <string name="titres">Titre</string>
+    <string name="activites_objet"> Activité:</string>
+    <string name="mail">Email</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="connexion">Se connecter</string>
+    <string name="fleche"></string>
+    <string name="swipe_right_enregistrer">S\'enregistrer en glissant a droite</string>
+    <string name="noms">Noms</string>
+    <string name="prenoms">Prenoms</string>
+    <string name="profils">Profil :</string>
+    <string-array name="liste_profils">
+        <item>Médecin</item>
+        <item>Intervenant</item>
+        <item>Patient</item>
+    </string-array>
+    <string name="remot_de_passe">Confirmer le mot de passe</string>
+    <string name="enregistrer">S\'enregistrer</string>
+<string name="swipe_left_connexion">Se connecter en glissant a gauche</string>
+    <string name="fermer" />
+</resources>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AjoutFragParcs">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/parcs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/parcs"
+            android:textAlignment="center"
+            android:textSize="50sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="25dp" />
+
+        <EditText
+            android:id="@+id/parcours_titres"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/titres"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textSize="15sp"
+            android:autofillHints="@string/titres" />
+
+        <EditText
+            android:id="@+id/parcours_descriptions"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/descriptions"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textSize="15sp"
+            android:autofillHints="@string/descriptions" />
+
+        <EditText
+            android:id="@+id/categories"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/categories"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:padding="15dp"
+            android:inputType="text"
+            android:textSize="15sp"
+            android:autofillHints="@string/categories" />
+
+        <TextView
+            android:id="@+id/patients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/patients"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="15sp"/>
+
+        <Spinner
+            android:id="@+id/liste_des_patients"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/listes_des_patients"
+            android:padding="15dp"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/activites_liste"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/activites"
+                android:textAlignment="center"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/activites_objet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/activites_objet"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/activites_titres"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:autofillHints="@string/titres"
+                android:hint="@string/titres"
+                android:inputType="text"
+                android:padding="15dp"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/activites_descriptions"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:autofillHints="@string/descriptions"
+                android:hint="@string/descriptions"
+                android:inputType="text"
+                android:padding="15dp"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/durees"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:autofillHints="@string/durees"
+                android:hint="@string/durees"
+                android:inputType="text"
+                android:padding="15dp"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bouton_activites_ajouter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="@android:color/white"
+            android:text="@string/activites_ajouter"/>
+
+        <Button
+            android:id="@+id/bouton_valide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@android:color/white"
+            android:text="@string/valide"/>
+
+        <Button
+            android:id="@+id/bouton_annule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="@android:color/white"
+            android:text="@string/annule" />
+
+    </LinearLayout>
+
+</ScrollView>

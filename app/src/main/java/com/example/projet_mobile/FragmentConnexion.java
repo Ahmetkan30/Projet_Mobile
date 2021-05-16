@@ -37,12 +37,12 @@ public class FragmentConnexion extends Fragment {
             EditText e_mot_de_passe = view.findViewById(R.id.mot_de_passe);
             email = e_mail.getText().toString();
             mdp = e_mot_de_passe.getText().toString();
-            //Intent espacePatientIntent = new Intent(activity.getApplicationContext(), EspacePatient.class);
-            //startActivity(espacePatientIntent);
+            //Intent Patient = new Intent(activity.getApplicationContext(), Patient.class);
+            //startActivity(Patient);
+            Intent Medecin = new Intent(activity.getApplicationContext(), Medecin.class);
+            startActivity(Medecin);
 
 
-            Intent espaceMedecinIntent = new Intent(activity.getApplicationContext(), Medecin.class);
-            startActivity(espaceMedecinIntent);
 
 
         });

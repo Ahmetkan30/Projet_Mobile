@@ -1,4 +1,4 @@
-package com.example.test;
+package com.example.projet_mobile;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;

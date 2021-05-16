@@ -20,11 +20,6 @@
     <string name="noms">Noms</string>
     <string name="prenoms">Prenoms</string>
     <string name="profils">Profil :</string>
-    <string-array name="liste_profils">
-        <item>Médecin</item>
-        <item>Intervenant</item>
-        <item>Patient</item>
-    </string-array>
     <string name="remot_de_passe">Confirmer le mot de passe</string>
     <string name="enregistrer">S\'enregistrer</string>
     <string name="swipe_left_connexion">Se connecter en glissant a gauche</string>

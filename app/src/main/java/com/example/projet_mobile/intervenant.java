@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class Intervenant extends AppCompatActivity implements AdapterView.OnItemSelectedListener,
+public class intervenant extends AppCompatActivity implements AdapterView.OnItemSelectedListener,
         DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
 
     LinearLayout linearLayout;
@@ -43,14 +43,14 @@ public class Intervenant extends AppCompatActivity implements AdapterView.OnItem
         Spinner spinner = findViewById(R.id.spinner);
         spinner.setOnItemSelectedListener(this);
 
-        Button reprogrammerButton = findViewById(R.id.bouton_horaire);
-        reprogrammerButton.setOnClickListener(v -> {
+        Button reorganisationButton = findViewById(R.id.bouton_horaire);
+        reorganisationButton.setOnClickListener(v -> {
             Calendar calendar = Calendar.getInstance();
             années = calendar.get(Calendar.YEAR);
             mois = calendar.get(Calendar.MONTH);
             jours = calendar.get(Calendar.DAY_OF_MONTH);
-            DatePickerDialog datePickerDialog = new DatePickerDialog(Intervenant.this,
-                    Intervenant.this, années, mois, jours);
+            DatePickerDialog datePickerDialog = new DatePickerDialog(intervenant.this,
+                    intervenant.this, années, mois, jours);
             datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
             datePickerDialog.show();
         });
@@ -83,8 +83,8 @@ public class Intervenant extends AppCompatActivity implements AdapterView.OnItem
         Calendar c = Calendar.getInstance();
         int heure = c.get(Calendar.HOUR);
         int min = c.get(Calendar.MINUTE);
-        TimePickerDialog timePickerDialog = new TimePickerDialog(Intervenant.this,
-                Intervenant.this, heure, min, DateFormat.is24HourFormat(this));
+        TimePickerDialog timePickerDialog = new TimePickerDialog(intervenant.this,
+                intervenant.this, heure, min, DateFormat.is24HourFormat(this));
         timePickerDialog.show();
     }
     @Override

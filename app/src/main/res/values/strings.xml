@@ -27,6 +27,11 @@
     </string-array>
     <string name="remot_de_passe">Confirmer le mot de passe</string>
     <string name="enregistrer">S\'enregistrer</string>
-<string name="swipe_left_connexion">Se connecter en glissant a gauche</string>
+    <string name="swipe_left_connexion">Se connecter en glissant a gauche</string>
     <string name="fermer" />
+    <string name="btn_horaire" />
+    <string name="reorganisr" />
+    <string name="dac" />
+    <string name="bouton_horaire">Bouton horaires</string>
+    <string name="dates_du_patient">Dates du patient :</string>
 </resources>

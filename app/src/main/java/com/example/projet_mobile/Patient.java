@@ -1,7 +1,16 @@
-package com.example.projet_mobile;
+package com.example.test;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.os.Bundle;
+import android.text.format.DateFormat;
+import android.view.View;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.LinearLayout;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +32,7 @@ public class Patient extends AppCompatActivity implements DatePickerDialog.OnDat
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_espace_patient);
+        setContentView(R.layout.activity_patient);
         WeekView mWeekView = findViewById(R.id.weekView);
         mWeekView.setMonthChangeListener(mMonthChangeListener);
         mWeekView.setOnEventClickListener(onEventClick);
@@ -52,26 +61,26 @@ public class Patient extends AppCompatActivity implements DatePickerDialog.OnDat
                         + "\nHeure début " + Debheurs + "h" + Debmin
                         + "\nHeure fin " + FinRDVheure + "h" + FinRDVmin
                 , Toast.LENGTH_LONG).show();
-        montreledialog(R.layout.dialog_afficher_seance, event.getColor());
+        montreledialog(R.layout.activity_affichageactiviter, event.getColor());
     };
 
     private void montreledialog(int layout, int color){
-        AlertDialog.Builder Constructiondialog = new AlertDialog.Builder(EspacePatient.this);
+        AlertDialog.Builder Constructiondialog = new AlertDialog.Builder(Patient.this);
         View layoutView = getLayoutInflater().inflate(layout, null);
         LinearLayout options = layoutView.findViewById(R.id.linear_layout);
         options.setBackgroundColor(color);
-        Button dialogButton = layoutView.findViewById(R.id.btn_ok);
+        Button dialogButton = layoutView.findViewById(R.id.bouton_daccord);
         Constructiondialog.setView(layoutView);
         AlertDialog alertDialog = Constructiondialog.create();
         alertDialog.show();
         dialogButton.setOnClickListener(view -> alertDialog.dismiss());
-        Button reprogrammerButton = layoutView.findViewById(R.id.btn_reprogrammer);
-        reprogrammerButton.setOnClickListener(v -> {
+        Button reprogButton = layoutView.findViewById(R.id.bouton_reorganisr);
+        reprogButton.setOnClickListener(v -> {
             Calendar calendar = Calendar.getInstance();
             années = calendar.get(Calendar.YEAR);
             mois = calendar.get(Calendar.MONTH);
             jour = calendar.get(Calendar.DAY_OF_MONTH);
-            DatePickerDialog datePickerDialog = new DatePickerDialog(EspacePatient.this, EspacePatient.this, années, mois, jour);
+            DatePickerDialog datePickerDialog = new DatePickerDialog(Patient.this, Patient.this, années, mois, jour);
             datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
             datePickerDialog.show();
         });
@@ -85,8 +94,8 @@ public class Patient extends AppCompatActivity implements DatePickerDialog.OnDat
         Calendar c = Calendar.getInstance();
         int hour = c.get(Calendar.HOUR);
         int minute = c.get(Calendar.MINUTE);
-        TimePickerDialog timePickerDialog = new TimePickerDialog(EspacePatient.this,
-                EspacePatient.this, hour, minute, DateFormat.is24HourFormat(this));
+        TimePickerDialog timePickerDialog = new TimePickerDialog(Patient.this,
+                Patient.this, hour, minute, DateFormat.is24HourFormat(this));
         timePickerDialog.show();
     }
     @Override
@@ -113,7 +122,7 @@ public class Patient extends AppCompatActivity implements DatePickerDialog.OnDat
         endTime.add(Calendar.HOUR, 1);
         endTime.set(Calendar.MONTH, newMonth-1);
         WeekViewEvent event = new WeekViewEvent(1, getEventTitle(startTime), startTime, endTime);
-        event.setColor(getResources().getColor(R.color.design_default_color_secondary));
+        event.setColor(getResources().getColor(R.color.design_default_color_primary));
         events.add(event);
 
         startTime = Calendar.getInstance();
@@ -126,7 +135,7 @@ public class Patient extends AppCompatActivity implements DatePickerDialog.OnDat
         endTime.set(Calendar.MINUTE, 30);
         endTime.set(Calendar.MONTH, newMonth-1);
         event = new WeekViewEvent(10, getEventTitle(startTime), startTime, endTime);
-        event.setColor(getResources().getColor(R.color.design_default_color_secondary));
+        event.setColor(getResources().getColor(R.color.design_default_color_primary));
         events.add(event);
 
         startTime = Calendar.getInstance();
@@ -138,7 +147,7 @@ public class Patient extends AppCompatActivity implements DatePickerDialog.OnDat
         endTime.set(Calendar.HOUR_OF_DAY, 5);
         endTime.set(Calendar.MINUTE, 0);
         event = new WeekViewEvent(10, getEventTitle(startTime), startTime, endTime);
-        event.setColor(getResources().getColor(R.color.design_default_color_secondary));
+        event.setColor(getResources().getColor(R.color.design_default_color_primary));
         events.add(event);
 
         startTime = Calendar.getInstance();
@@ -150,7 +159,7 @@ public class Patient extends AppCompatActivity implements DatePickerDialog.OnDat
         endTime.add(Calendar.HOUR_OF_DAY, 2);
         endTime.set(Calendar.MONTH, newMonth-1);
         event = new WeekViewEvent(2, getEventTitle(startTime), startTime, endTime);
-        event.setColor(getResources().getColor(R.color.design_default_color_secondary));
+        event.setColor(getResources().getColor(R.color.design_default_color_primary));
         events.add(event);
 
         startTime = Calendar.getInstance();
@@ -163,7 +172,7 @@ public class Patient extends AppCompatActivity implements DatePickerDialog.OnDat
         endTime.add(Calendar.HOUR_OF_DAY, 3);
         endTime.set(Calendar.MONTH, newMonth - 1);
         event = new WeekViewEvent(3, getEventTitle(startTime), startTime, endTime);
-        event.setColor(getResources().getColor(R.color.design_default_color_secondary));
+        event.setColor(getResources().getColor(R.color.design_default_color_primary));
         events.add(event);
 
         startTime = Calendar.getInstance();
@@ -175,7 +184,7 @@ public class Patient extends AppCompatActivity implements DatePickerDialog.OnDat
         endTime = (Calendar) startTime.clone();
         endTime.add(Calendar.HOUR_OF_DAY, 3);
         event = new WeekViewEvent(4, getEventTitle(startTime), startTime, endTime);
-        event.setColor(getResources().getColor(R.color.design_default_color_secondary));
+        event.setColor(getResources().getColor(R.color.design_default_color_primary));
         events.add(event);
 
         startTime = Calendar.getInstance();
@@ -187,7 +196,7 @@ public class Patient extends AppCompatActivity implements DatePickerDialog.OnDat
         endTime = (Calendar) startTime.clone();
         endTime.add(Calendar.HOUR_OF_DAY, 3);
         event = new WeekViewEvent(5, getEventTitle(startTime), startTime, endTime);
-        event.setColor(getResources().getColor(R.color.design_default_color_secondary));
+        event.setColor(getResources().getColor(R.color.design_default_color_primary));
         events.add(event);
 
         startTime = Calendar.getInstance();
@@ -199,7 +208,7 @@ public class Patient extends AppCompatActivity implements DatePickerDialog.OnDat
         endTime = (Calendar) startTime.clone();
         endTime.add(Calendar.HOUR_OF_DAY, 3);
         event = new WeekViewEvent(5, getEventTitle(startTime), startTime, endTime);
-        event.setColor(getResources().getColor(R.color.design_default_color_secondary));
+        event.setColor(getResources().getColor(R.color.design_default_color_primary));
         events.add(event);
 
         return events;

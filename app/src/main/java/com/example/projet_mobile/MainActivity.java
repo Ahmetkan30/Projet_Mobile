@@ -18,6 +18,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // créer des patients pour tester
+        FichPatient p = new FichPatient("nom1","prenom1","email1@gmail.com","mdp1");
+        FichPatient p2 = new FichPatient("nom2","prenom2","email2@gmail.com","mdp2");
+        FichPatient p3 = new FichPatient("nom3","prenom3","email3@gmail.com","mdp3");
+
         ViewPager viewPager = findViewById(R.id.viewPager);
 
         AuthenticationPagerAdapter pagerAdapter = new AuthenticationPagerAdapter(getSupportFragmentManager());

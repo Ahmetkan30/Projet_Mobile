@@ -118,12 +118,12 @@
                 android:id="@+id/bouton_enregistrer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="30dp"
-                android:layout_centerInParent="true"
-                android:textColor="@android:color/white"
-                android:text="@string/enregistrer"/>
+                android:text="@string/enregistrer"
+                android:textColor="@android:color/white" />
 
             <ImageView
                 android:layout_width="30dp"
@@ -136,11 +136,11 @@
                 android:id="@+id/swipe_left_connexion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/swipe_left_connexion"
-                android:textSize="15sp"
-                android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="20dp"/>
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:text="@string/swipe_left_connexion"
+                android:textSize="15sp" />
 
         </RelativeLayout>
 

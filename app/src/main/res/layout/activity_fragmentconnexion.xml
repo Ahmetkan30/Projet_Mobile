@@ -47,18 +47,22 @@
         android:id="@+id/bouton_connexion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/spinner"
+        android:layout_marginTop="400dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="400dp"
+        android:text="@string/connexion"
         android:textColor="@android:color/white"
-        android:text="@string/connexion"/>
+        tools:ignore="NotSibling" />
 
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="312dp"
+        android:layout_height="232dp"
         android:layout_above="@id/swipe_right_enregistrer"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="54dp"
+        android:layout_marginRight="54dp"
+        android:layout_marginBottom="-23dp"
         android:contentDescription="@string/fleche" />
 
     <TextView

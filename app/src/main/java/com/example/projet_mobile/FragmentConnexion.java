@@ -8,44 +8,54 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.Spinner;
 
+public class FragmentConnexion extends Fragment implements AdapterView.OnItemSelectedListener {
 
-public class FragmentConnexion extends Fragment {
-
-    String email;
-    String mdp;
+    private String profil = "";
 
     public FragmentConnexion() {
-
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.activity_fragmentconnexion, container, false);
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState){
-        Button boutonConnection = view.findViewById(R.id.bouton_connexion);
+        Button boutonConnecter = view.findViewById(R.id.bouton_connexion);
         MainActivity activity = (MainActivity) getActivity();
-        boutonConnection.setOnClickListener(v -> {
+        Spinner spinner = view.findViewById(R.id.spinner);
+        spinner.setOnItemSelectedListener(this);
+        boutonConnecter.setOnClickListener(v -> {
 
-            EditText e_mail = view.findViewById(R.id.mail);
-            EditText e_mot_de_passe = view.findViewById(R.id.mot_de_passe);
-            email = e_mail.getText().toString();
-            mdp = e_mot_de_passe.getText().toString();
-            Intent Patient = new Intent(activity.getApplicationContext(), Patient.class);
-            startActivity(Patient);
-            Intent Medecin = new Intent(activity.getApplicationContext(), Medecin.class);
-            startActivity(Medecin);
-            Intent intervenant = new Intent(activity.getApplicationContext(), intervenant.class);
-            startActivity(intervenant);
-
-
+            if(this.profil.equals("Médecin")){
+                Intent espaceMedecinIntent = new Intent(activity.getApplicationContext(), Medecin.class);
+                startActivity(espaceMedecinIntent);
+            }
+            else if(this.profil.equals("Intervenant")){
+                Intent espaceIntervenantIntent = new Intent(activity.getApplicationContext(), intervenant.class);
+                startActivity(espaceIntervenantIntent);
+            }
+            else{
+                Intent espacePatientIntent = new Intent(activity.getApplicationContext(), Patient.class);
+                startActivity(espacePatientIntent);
+            }
         });
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+        this.profil = (String) parent.getItemAtPosition(pos);
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }
